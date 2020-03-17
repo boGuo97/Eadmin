@@ -1,0 +1,124 @@
+// 主题名称
+@theme-name: future;
+
+// 左侧背景底色
+@menu-box-bg-color: rgba(0, 0, 0, 0.2);
+
+// 左侧背景图
+@menu-box-bg-image: url('../../../images/sidebar-3.jpg');
+
+// 左侧导航栏底色
+@menu-bg-color: transparent;
+
+// 左侧导航栏字体颜色
+@menu-color:  #ffffff;
+
+// 左侧导航栏一级hover时样式
+// 左侧导航栏二级hover时样式
+@menu-hover-bg-color: rgba(0, 0, 0, 0.3);
+@menu-hover-color: #ffffff;
+
+// 左侧导航栏二级底色
+@menu-er-bg-color: transparent;
+@menu-er--color: #ffffff;
+
+// 左侧导航栏二级选中时样式
+@menu-er-active-bg-color: rgba(0, 0, 0, 0.7);
+@menu-er-active-color: #ffffff;
+
+
+.gb-future {
+  background-image: url('../../../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  .ev-aside {
+    width: 200px !important;
+    background-color: @menu-box-bg-color;
+    .ev-logo {
+      background: @menu-bg-color;
+    }
+    .ev-menu {
+      background-color: @menu-bg-color;
+      .el-submenu__title {
+        color: @menu-color;
+        &:hover {
+          background-color: @menu-hover-bg-color;
+          color: @menu-hover-color;
+        }
+        i {
+          margin-right: 14px;
+          color: @menu-color;
+        }
+        .el-submenu__icon-arrow {
+          font-weight: bold;
+          font-size: 16px;
+          margin-right: 0;
+          margin-top: -7px !important;
+        }
+        .gb-i-title {
+          font-size: 18px;
+          margin-top: -1px;
+        }
+      }
+      .el-menu-item:focus, .el-menu-item:hover {
+        background-color: @menu-hover-bg-color;
+        color: @menu-hover-color;
+      }
+      .el-menu {
+        background-color: @menu-er-bg-color;
+        .el-menu-item {
+          color: @menu-er--color;
+          height: 54px;
+          line-height: 54px;
+          padding-left: 44px !important;
+        }
+        .is-active {
+          background-color: @menu-er-active-bg-color;
+          color: @menu-er-active-color;
+        }
+      }
+      .el-menu-item {
+        color: @menu-color;
+        i {
+          margin-right: 14px;
+          width: auto;
+          color: @menu-color;
+        }
+      }
+      .el-menu-item.is-active {
+        background-color: @menu-er-active-bg-color;
+        color: @menu-er-active-color;
+      }
+    }
+  }
+  .ev-container {
+    padding-left: 200px !important;
+    .ev-flwx {
+      width: calc(100vw - 200px) !important;
+      left: 200px !important;
+      .ev-header-box {
+        background-color: @menu-box-bg-color;
+        i, span {
+          color: #ffffff;
+        }
+        .theme:hover, .user:hover, .full-screen:hover {
+          background-color: @menu-er-active-bg-color !important;
+        }
+      }
+    }
+  }
+  .ev-main {
+    .ev-main-box {
+      background-color: rgba(255, 255, 255, 0.9);
+      height: 100%;
+    }
+  }
+  .tabs {
+    background-color: @menu-box-bg-color;
+    padding: 6px 0 !important;
+    .el-tabs__item {
+      border-radius: 0 !important;
+      background-color: rgba(255, 255, 255, 0.9) !important;
+    }
+  }
+}

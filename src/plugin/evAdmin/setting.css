@@ -1,0 +1,24 @@
+/* 文字按钮取消上下padding */
+.ev-button-mini {
+  padding: 3px 6px !important;
+  border-radius: 0 !important;
+}
+
+/* 自定义弹出框 */
+.ev-dialog .el-dialog__header{
+  border-bottom: 1px solid #e8eaec;
+}
+
+.ev-dialog .el-dialog__body {
+  padding: 20px;
+}
+
+.ev-form .ev-form-position-top .el-form-item__label {
+  line-height: 20px !important;
+  color: #444444 !important;
+}
+
+.ev-form .ev-form-handle {
+  text-align: center;
+  margin-bottom: 0 !important;
+}

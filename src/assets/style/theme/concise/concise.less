@@ -1,0 +1,124 @@
+// 主题名称
+@theme-name: concise;
+
+// 左侧背景底色
+@menu-box-bg-color: #FFFFFF;
+
+// 左侧导航栏底色
+@menu-bg-color: #FFFFFF;
+
+// 左侧导航栏字体颜色
+@menu-color:  #555555;
+
+// 左侧导航栏一级hover时样式
+// 左侧导航栏二级hover时样式
+@menu-hover-bg-color: transparent;
+@menu-hover-color: #2d8cf0;
+
+// 左侧导航栏二级底色
+@menu-er-bg-color: #FFFFFF;
+@menu-er--color: #555555;
+
+// 左侧导航栏二级选中时样式
+@menu-er-active-bg-color: #f0f6ff;
+@menu-er-active-color: #2d8cf0;
+
+
+.gb-concise {
+  .ev-aside {
+    background-color: @menu-box-bg-color;
+    box-shadow: 2px 0 8px 0 rgba(29,35,41,.05);
+    .ev-logo {
+      background: @menu-box-bg-color;
+    }
+    .ev-menu {
+      background-color: @menu-bg-color;
+      .ev-submenu.is-active {
+        .el-submenu__title {
+          color: @menu-hover-color;
+          i {
+            color: @menu-hover-color;
+          }
+        }
+      }
+      .el-submenu__title {
+        color: @menu-color;
+        height: 52px;
+        line-height: 52px;
+        &:hover {
+          background-color: @menu-hover-bg-color;
+          color: @menu-hover-color;
+        }
+        &:hover i {
+          color: @menu-hover-color;
+        }
+        i {
+          margin-right: 14px;
+        }
+        .el-submenu__icon-arrow {
+          font-weight: bold;
+          font-size: 16px;
+          margin-right: 0;
+          margin-top: -7px !important;
+        }
+        .gb-i-title {
+          font-size: 18px;
+          margin-top: -1px;
+        }
+      }
+      .el-menu-item:focus, .el-menu-item:hover {
+        background-color: @menu-hover-bg-color;
+        color: @menu-hover-color;
+      }
+      .el-menu {
+        background-color: @menu-er-bg-color;
+        .el-menu-item {
+          color: @menu-er--color;
+          height: 52px;
+          line-height: 52px;
+          padding-left: 44px !important;
+        }
+        .is-active {
+          background-color: @menu-er-active-bg-color;
+          color: @menu-er-active-color;
+          position: relative;
+          &::before {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 100%;
+            background-color: @menu-hover-color;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+      }
+      .el-menu-item {
+        color: @menu-color;
+        &:hover i {
+          color: @menu-hover-color;
+        }
+        i {
+          margin-right: 14px;
+          width: auto;
+        }
+      }
+      .el-menu-item.is-active {
+        background-color: @menu-er-active-bg-color;
+        color: @menu-er-active-color;
+        position: relative;
+        &::before {
+          content: '';
+          display: block;
+          width: 4px;
+          height: 100%;
+          background-color: @menu-hover-color;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+}
